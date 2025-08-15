@@ -3,6 +3,7 @@ Os 6 exercicios da aula 1 de POO
 
 ## O que esta sendo usado:
 1. Todos são feitos em Java na IDE IntelliJ
+2. Uso de tradutor google para entendimento dos erros (interpretação do erros complexos por meio do ChatGPT = ex: 3)
 
 #### O que já foi aprendido:
 1. Uso do For no ex: 1,2,3
