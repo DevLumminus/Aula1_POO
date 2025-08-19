@@ -4,34 +4,27 @@ import java.util.Scanner;
 
 public class Ex5 {
     public static void main(String[] args) {
-        Scanner Salario = new Scanner(System.in); // Cria um objeto Scanner Salario
-        Scanner Aumento = new Scanner(System.in); // Cria um objeto Scanner Salario
-        Scanner Resposta = new Scanner(System.in); // Cria um objeto Scanner Salario
-        StringBuffer resposta;
+        Scanner Salario_Novo = new Scanner(System.in); // Cria um objeto Scanner Salario
+        String resposta;
         do {
             System.out.println("Digite o seu salario (1000,50): "); //Mensagem para receber o salario
-            float Sal = Salario.nextFloat(); // Lê os dados digitado
-            double NovoSal = (Sal * 125) / 100; // Acrescenta 25% no salario
-            System.out.printf("O seu novo salario será %.2f (almento de 25%%)", NovoSal);
+            float Salario = Salario_Novo.nextFloat(); // Lê os dados digitado
 
-            System.out.println("Deseja converter outro salario?");
-            resposta = Resposta.nextLine();
+            System.out.println("Digite o aumento que desejas (25 = 25%): "); //Mensagem para receber o salario
+            double Aumento = Salario_Novo.nextFloat(); // Acrescenta 25% no salario
 
-            if (resposta.equalsIgnoreCase("sim")){
-                continue;
-            } else{
-                System.out.println("Programa Encerrado");
-                break;
-            }
-        }
-        while (resposta.equalsIgnoreCase("sim"));{
-            System.out.println("Digite o seu salario (1000,50): "); //Mensagem para receber o salario
-            float Sal = Salario.nextFloat(); // Lê os dados digitado
-            double NovoSal = (Sal * 125) / 100; // Acrescenta 25% no salario
-            System.out.printf("O seu novo salario será %.2f (almento de 25%%)", NovoSal);
+            double PorcentagemDeci = (Aumento/100) + 1;
 
-            System.out.println("Deseja converter outro salario? (sim ou não)");
-            resposta = Resposta.nextLine();
-        }
+            System.out.printf("O seu salario %.2f, com uma aumento de %.2f%%, ficou %.2f.\n", Salario, Aumento, Salario*PorcentagemDeci); //Mensagem para receber o salario
+            // Consumir a quebra de linha pendente
+            Salario_Novo.nextLine();
+
+            System.out.print("Deseja converter outro salário? (sim/não): ");
+            resposta = Salario_Novo.nextLine();
+
+        } while (resposta.equalsIgnoreCase("sim"));
+
+        System.out.println("Programa Encerrado");
+        Salario_Novo.close();
     }
 }
