@@ -17,7 +17,7 @@ Os 6 exercicios da aula 1 de POO
 9. Uso do resposta.equalsIgnoreCase("sim") para verificação da resposta do usuario no Do para inicio do While (ex: 5,6)****
 10. Uso de "teste de print" para verificação de erros logicos
 
-*Só é preciso usar 1 por class
-**O Do tem o codigo e o While pode ter só a mensagem final e a conclusão
-***Melhor do que usar o float
-****Verifica a resposta sendo maiuscula ou minuscula
+*Só é preciso usar 1 por class\
+**O Do tem o codigo e o While pode ter só a mensagem final e a conclusão\
+***Melhor do que usar o float\
+****Verifica a resposta sendo maiuscula ou minuscula\
